@@ -1,0 +1,34 @@
+{
+  "name": "qr-event-app",
+  "version": "1.0.0",
+  "description": "장소별 선착순 QR코드 이벤트 앱",
+  "main": "server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": [
+    "qr-code",
+    "event",
+    "react",
+    "node",
+    "express"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
